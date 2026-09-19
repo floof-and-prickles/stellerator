@@ -1,0 +1,17 @@
+{
+  "name": "stellerator",
+  "description": "Claude Code plugins by John Ky.",
+  "owner": {
+    "name": "John Ky",
+    "email": "chateau.de.ky@gmail.com",
+    "url": "https://github.com/floof-and-prickles"
+  },
+  "plugins": [
+    {
+      "name": "claude-model-picker",
+      "source": "./plugins/claude-model-picker",
+      "description": "Decide which Claude model and effort level to use for a task, subagent, or workflow step.",
+      "version": "1.0.0"
+    }
+  ]
+}
