@@ -81,6 +81,25 @@ Practical guidance:
 - Hold effort constant within a single cached conversation/session where possible
   — changing it mid-conversation can invalidate prompt caching.
 
+**Cost scales faster than quality — and non-linearly.** Effort/reasoning-token
+multipliers are steep on every provider measured so far: e.g. GPT-5 at `high`
+effort uses ~23x the tokens (and cost) of `minimal` effort, but most of that
+multiplier buys little — `medium`→`high` barely moves the quality score
+compared to `minimal`→`medium` ([Artificial Analysis, GPT-5 benchmark
+analysis](https://artificialanalysis.ai/articles/gpt-5-benchmarks-and-analysis)).
+Expect the same diminishing-returns shape elsewhere: the top one or two effort
+levels on any given model usually buy little quality for a lot of cost — don't
+reach for max effort by default.
+
+For current cross-provider cost-vs-quality numbers, check [Artificial
+Analysis's Intelligence Index and "Intelligence Index vs Cost per
+Task" chart](https://artificialanalysis.ai/models) rather than trusting a
+pinned table: $/task figures move constantly and vary a lot by benchmark
+methodology, and searching for them surfaces a lot of SEO content quoting
+inconsistent numbers for the same model — prefer a source (like this one) that
+publishes its methodology, and be skeptical of any single figure you can't
+trace back to one.
+
 ## 4. Combined decision flow
 
 1. Default to the cheapest tier in the efficiency-first strategy, at that model's
