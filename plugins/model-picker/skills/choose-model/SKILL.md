@@ -1,6 +1,6 @@
 ---
 name: choose-model
-description: Decide which model and effort/reasoning level to use for a given task, API call, subagent, or workflow step, across providers (Claude/Anthropic, OpenAI, Google Gemini, Chinese labs like DeepSeek/Qwen/Kimi/GLM, open-weight models like Llama/Mistral). Use when picking a model, tuning effort/reasoning_effort/thinking_level/thinking_budget/verbosity, routing a delegated subagent or issue to a model class, or triaging by "which model class it needs". Triggers on terms like "which model should I use", "model selection", "effort level", "reasoning effort", "thinking budget", "sonnet vs opus", "gpt-5 vs o-series", "deepseek vs qwen", "should I self-host", "route to a subagent".
+description: Decide which model and effort/reasoning level to use for a given task, API call, subagent, or workflow step, across providers (Claude/Anthropic, OpenAI, Google Gemini, Chinese labs like DeepSeek/Qwen/Kimi/GLM, open-weight models like Llama/Mistral) — including cost tradeoffs (output-token verbosity, subscription vs metered API, prompt-cache discounts). Use when picking a model, tuning effort/reasoning_effort/thinking_level/thinking_budget/verbosity, routing a delegated subagent or issue to a model class, or triaging by "which model class it needs". Triggers on terms like "which model should I use", "model selection", "effort level", "reasoning effort", "thinking budget", "sonnet vs opus", "gpt-5 vs o-series", "deepseek vs qwen", "should I self-host", "route to a subagent", "cost efficiency", "subscription vs API", "prompt caching cost", "token efficiency".
 ---
 
 # Choosing a model and effort level
@@ -81,24 +81,12 @@ Practical guidance:
 - Hold effort constant within a single cached conversation/session where possible
   — changing it mid-conversation can invalidate prompt caching.
 
-**Cost scales faster than quality — and non-linearly.** Effort/reasoning-token
-multipliers are steep on every provider measured so far: e.g. GPT-5 at `high`
-effort uses ~23x the tokens (and cost) of `minimal` effort, but most of that
-multiplier buys little — `medium`→`high` barely moves the quality score
-compared to `minimal`→`medium` ([Artificial Analysis, GPT-5 benchmark
-analysis](https://artificialanalysis.ai/articles/gpt-5-benchmarks-and-analysis)).
-Expect the same diminishing-returns shape elsewhere: the top one or two effort
-levels on any given model usually buy little quality for a lot of cost — don't
-reach for max effort by default.
-
-For current cross-provider cost-vs-quality numbers, check [Artificial
-Analysis's Intelligence Index and "Intelligence Index vs Cost per
-Task" chart](https://artificialanalysis.ai/models) rather than trusting a
-pinned table: $/task figures move constantly and vary a lot by benchmark
-methodology, and searching for them surfaces a lot of SEO content quoting
-inconsistent numbers for the same model — prefer a source (like this one) that
-publishes its methodology, and be skeptical of any single figure you can't
-trace back to one.
+**Cost isn't just $/token at a given effort level.** Output-token verbosity,
+whether you're on a subscription or metered API, and prompt-cache hit rate can
+each swing total cost as much as model/effort choice does — read
+[`references/cost-efficiency.md`](references/cost-efficiency.md) whenever cost
+or budget is actually a factor in the decision (skip it otherwise; it's not
+needed for a routine model pick).
 
 ## 4. Combined decision flow
 
