@@ -15,4 +15,5 @@ In Claude Code:
 
 - [`model-picker`](plugins/model-picker) — decide which model and effort/reasoning
   level to use for a task, subagent, or workflow step, across providers (Claude,
-  OpenAI, more to come).
+  OpenAI, Gemini, Chinese labs like DeepSeek/Qwen/Kimi/GLM, and open-weight models
+  like Llama/Mistral).
