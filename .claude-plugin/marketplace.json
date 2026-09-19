@@ -11,7 +11,7 @@
       "name": "model-picker",
       "source": "./plugins/model-picker",
       "description": "Decide which model and effort/reasoning level to use for a task, subagent, or workflow step, across providers (Claude, OpenAI, Gemini, Chinese labs, open-weight models).",
-      "version": "2.1.0"
+      "version": "2.2.0"
     }
   ]
 }
