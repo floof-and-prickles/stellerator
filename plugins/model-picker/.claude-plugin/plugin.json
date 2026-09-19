@@ -1,0 +1,11 @@
+{
+  "name": "model-picker",
+  "description": "Decide which model and effort/reasoning level to use for a task, subagent, or workflow step, across providers (Claude, OpenAI, more to come).",
+  "version": "2.0.0",
+  "author": {
+    "name": "John Ky",
+    "email": "chateau.de.ky@gmail.com"
+  },
+  "repository": "https://github.com/floof-and-prickles/stellerator",
+  "license": "MIT"
+}

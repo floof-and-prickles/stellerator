@@ -8,10 +8,10 @@
   },
   "plugins": [
     {
-      "name": "claude-model-picker",
-      "source": "./plugins/claude-model-picker",
-      "description": "Decide which Claude model and effort level to use for a task, subagent, or workflow step.",
-      "version": "1.0.0"
+      "name": "model-picker",
+      "source": "./plugins/model-picker",
+      "description": "Decide which model and effort/reasoning level to use for a task, subagent, or workflow step, across providers (Claude, OpenAI, more to come).",
+      "version": "2.0.0"
     }
   ]
 }

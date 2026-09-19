@@ -8,10 +8,11 @@ In Claude Code:
 
 ```
 /plugin marketplace add floof-and-prickles/stellerator
-/plugin install claude-model-picker@stellerator
+/plugin install model-picker@stellerator
 ```
 
 ## Plugins
 
-- [`claude-model-picker`](plugins/claude-model-picker) — decide which Claude model
-  and effort level to use for a task, subagent, or workflow step.
+- [`model-picker`](plugins/model-picker) — decide which model and effort/reasoning
+  level to use for a task, subagent, or workflow step, across providers (Claude,
+  OpenAI, more to come).
